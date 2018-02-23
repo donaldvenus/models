@@ -1,0 +1,26 @@
+<annotation verified="yes">
+	<folder>Ace of diamonds</folder>
+	<filename>RS_AceOfDiamonds_(29).jpg</filename>
+	<path>/var/host/media/removable/USB20FD/images//var/host/media/removable/USB20FD/annotations/RS_AceOfDiamonds_(29).xml</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4032</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>AceOfDiamonds</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1362</xmin>
+			<ymin>904</ymin>
+			<xmax>2939</xmax>
+			<ymax>2035</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,24 @@
+item {
+  id: 0
+  name: 'none_of_the_above'
+}
+
+item {
+  id: 1
+  name: 'AceOfDiamonds'
+}
+
+item {
+  id: 2
+  name: 'JackOfHearts'
+}
+
+item {
+  id: 3
+  name: 'QueenOfHearts'
+}
+
+item {
+  id: 4
+  name: 'KingOfHearts'
+}

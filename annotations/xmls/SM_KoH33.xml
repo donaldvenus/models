@@ -1,0 +1,26 @@
+<annotation>
+	<folder>King of Hearts</folder>
+	<filename>SM_KoH33.jpg</filename>
+	<path>/var/host/media/removable/USB20FD/images//var/host/media/removable/USB20FD/annotations/SM_KoH33.xml</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4032</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>KingOfHearts</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2377</xmin>
+			<ymin>1979</ymin>
+			<xmax>3546</xmax>
+			<ymax>2928</ymax>
+		</bndbox>
+	</object>
+</annotation>

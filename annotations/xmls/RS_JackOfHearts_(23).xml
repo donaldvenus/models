@@ -1,0 +1,26 @@
+<annotation verified="yes">
+	<folder>Jack of Hearts</folder>
+	<filename>RS_JackOfHearts_(23).jpg</filename>
+	<path>/var/host/media/removable/USB20FD/images//var/host/media/removable/USB20FD/annotations/RS_JackOfHearts_(23).xml</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4032</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>JackOfHearts</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>902</xmin>
+			<ymin>286</ymin>
+			<xmax>3352</xmax>
+			<ymax>2729</ymax>
+		</bndbox>
+	</object>
+</annotation>

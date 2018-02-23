@@ -1,0 +1,26 @@
+<annotation>
+  <folder>Public</folder>
+  <filename>QueenOfHearts_2.jpg</filename>
+  <path>/var/host/media/removable/USB20FD/images//var/host/media/removable/USB20FD/annotations/QueenOfHearts_2.xml</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>4032</width>
+    <height>3024</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>QueenOfHearts</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>1382</xmin>
+      <ymin>1685</ymin>
+      <xmax>4032</xmax>
+      <ymax>3024</ymax>
+    </bndbox>
+  </object>
+</annotation>

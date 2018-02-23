@@ -1,0 +1,26 @@
+<annotation>
+	<folder>KingOfHearts</folder>
+	<filename>DV_KingOfHearts_(9).JPG</filename>
+	<path>/var/host/media/removable/USB20FD/images//var/host/media/removable/USB20FD/annotations/DV_KingOfHearts_(9).xml</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>320</width>
+		<height>240</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>KingOfHearts</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>11</xmin>
+			<ymin>72</ymin>
+			<xmax>152</xmax>
+			<ymax>173</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Ace of Diamonds</folder>
+	<filename>SM_AoD32.jpg</filename>
+	<path>/var/host/media/removable/USB20FD/images//var/host/media/removable/USB20FD/annotations/SM_AoD32.xml</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4032</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>AceOfDiamonds</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>345</xmin>
+			<ymin>1004</ymin>
+			<xmax>2484</xmax>
+			<ymax>2827</ymax>
+		</bndbox>
+	</object>
+</annotation>

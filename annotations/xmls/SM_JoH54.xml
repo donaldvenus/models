@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Jack of Hearts</folder>
+	<filename>SM_JoH54.jpg</filename>
+	<path>/var/host/media/removable/USB20FD/images//var/host/media/removable/USB20FD/annotations/SM_JoH54.xml</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4032</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>JackOfHearts</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>772</xmin>
+			<ymin>1280</ymin>
+			<xmax>2819</xmax>
+			<ymax>3024</ymax>
+		</bndbox>
+	</object>
+</annotation>
