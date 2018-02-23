@@ -7,7 +7,7 @@ gcloud ml-engine jobs submit training `whoami`_object_detection_`date +%s` \
     --config ../var/host/media/removable/USB20FD/object_detection/samples/cloud/cloud.yml \
     -- \
     --train_dir=gs://cards_data/train \
-    --pipeline_config_path=gs://cards_data/data/faster_rcnn_resnet101_pets.config
+    --pipeline_config_path=gs://cards_data/data/faster_rcnn_resnet101_cards.config
 
 gcloud ml-engine jobs submit training `whoami`_object_detection_eval_`date +%s` \
     --runtime-version 1.2 \
@@ -19,4 +19,4 @@ gcloud ml-engine jobs submit training `whoami`_object_detection_eval_`date +%s` 
     -- \
     --checkpoint_dir=gs://cards_data/train \
     --eval_dir=gs://cards_data/eval \
-    --pipeline_config_path=gs://cards_data/data/faster_rcnn_resnet101_pets.config
+    --pipeline_config_path=gs://cards_data/data/faster_rcnn_resnet101_cards.config
