@@ -1,3 +1,8 @@
+# CS 499 Spring 2018 Group 20
+We will be using the TensorFlow models repository as the starting point for our project. The object detection and slim projects
+are the only projects currently used by our project. See more information about TensorFlow Models below.
+
+
 # TensorFlow Models
 
 This repository contains machine learning models implemented in
