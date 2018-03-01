@@ -1,13 +1,13 @@
 <annotation>
 	<folder>Queen of Hearts</folder>
 	<filename>SM_QoH59.jpg</filename>
-	<path>/var/host/media/removable/USB20FD/images//var/host/media/removable/USB20FD/annotations/SM_QoH59.xml</path>
+	<path>D:\Senior Year, Spring\CS499\Cards\RESIZED\Queen of Hearts\SM_QoH59.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>4032</width>
-		<height>3024</height>
+		<width>320</width>
+		<height>240</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>2753</xmin>
-			<ymin>278</ymin>
-			<xmax>3579</xmax>
-			<ymax>927</ymax>
+			<xmin>220</xmin>
+			<ymin>23</ymin>
+			<xmax>283</xmax>
+			<ymax>73</ymax>
 		</bndbox>
 	</object>
 </annotation>

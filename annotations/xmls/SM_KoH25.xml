@@ -1,13 +1,13 @@
 <annotation>
 	<folder>King of Hearts</folder>
 	<filename>SM_KoH25.jpg</filename>
-	<path>/var/host/media/removable/USB20FD/images//var/host/media/removable/USB20FD/annotations/SM_KoH25.xml</path>
+	<path>D:\Senior Year, Spring\CS499\Cards\RESIZED\King of Hearts\SM_KoH25.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>4032</width>
-		<height>3024</height>
+		<width>320</width>
+		<height>240</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>288</xmin>
-			<ymin>64</ymin>
-			<xmax>2084</xmax>
-			<ymax>1652</ymax>
+			<xmin>23</xmin>
+			<ymin>5</ymin>
+			<xmax>167</xmax>
+			<ymax>128</ymax>
 		</bndbox>
 	</object>
 </annotation>

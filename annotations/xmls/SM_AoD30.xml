@@ -1,13 +1,13 @@
 <annotation>
 	<folder>Ace of Diamonds</folder>
 	<filename>SM_AoD30.jpg</filename>
-	<path>/var/host/media/removable/USB20FD/images//var/host/media/removable/USB20FD/annotations/SM_AoD30.xml</path>
+	<path>D:\Senior Year, Spring\CS499\Cards\RESIZED\Ace of Diamonds\SM_AoD30.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>4032</width>
-		<height>3024</height>
+		<width>320</width>
+		<height>240</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>879</xmin>
-			<ymin>1283</ymin>
-			<xmax>2322</xmax>
-			<ymax>2781</ymax>
+			<xmin>70</xmin>
+			<ymin>101</ymin>
+			<xmax>183</xmax>
+			<ymax>222</ymax>
 		</bndbox>
 	</object>
 </annotation>

@@ -1,13 +1,13 @@
 <annotation>
-  <folder>Public</folder>
+  <folder>Downloads</folder>
   <filename>AceOfDiamonds_8.jpg</filename>
-  <path>/var/host/media/removable/USB20FD/images//var/host/media/removable/USB20FD/annotations/AceOfDiamonds_8.xml</path>
+  <path>C:\Users\Adam\Downloads\AceOfDiamonds_8.jpg</path>
   <source>
     <database>Unknown</database>
   </source>
   <size>
-    <width>4032</width>
-    <height>3024</height>
+    <width>300</width>
+    <height>225</height>
     <depth>3</depth>
   </size>
   <segmented>0</segmented>
@@ -17,10 +17,10 @@
     <truncated>0</truncated>
     <difficult>0</difficult>
     <bndbox>
-      <xmin>276</xmin>
-      <ymin>2604</ymin>
-      <xmax>1264</xmax>
-      <ymax>3019</ymax>
+      <xmin>19</xmin>
+      <ymin>196</ymin>
+      <xmax>95</xmax>
+      <ymax>225</ymax>
     </bndbox>
   </object>
 </annotation>

@@ -1,13 +1,13 @@
 <annotation>
-  <folder>Public</folder>
+  <folder>Downloads</folder>
   <filename>QueenOfHearts_15.jpg</filename>
-  <path>/var/host/media/removable/USB20FD/images//var/host/media/removable/USB20FD/annotations/QueenOfHearts_15.xml</path>
+  <path>C:\Users\Adam\Downloads\QueenOfHearts_15.jpg</path>
   <source>
     <database>Unknown</database>
   </source>
   <size>
-    <width>4032</width>
-    <height>3024</height>
+    <width>300</width>
+    <height>225</height>
     <depth>3</depth>
   </size>
   <segmented>0</segmented>
@@ -17,10 +17,10 @@
     <truncated>0</truncated>
     <difficult>0</difficult>
     <bndbox>
-      <xmin>1061</xmin>
-      <ymin>2576</ymin>
-      <xmax>2411</xmax>
-      <ymax>3024</ymax>
+      <xmin>79</xmin>
+      <ymin>194</ymin>
+      <xmax>173</xmax>
+      <ymax>225</ymax>
     </bndbox>
   </object>
 </annotation>

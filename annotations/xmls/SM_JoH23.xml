@@ -1,13 +1,13 @@
 <annotation>
 	<folder>Jack of Hearts</folder>
 	<filename>SM_JoH23.jpg</filename>
-	<path>/var/host/media/removable/USB20FD/images//var/host/media/removable/USB20FD/annotations/SM_JoH23.xml</path>
+	<path>D:\Senior Year, Spring\CS499\Cards\RESIZED\Jack of Hearts\SM_JoH23.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>4032</width>
-		<height>3024</height>
+		<width>320</width>
+		<height>240</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>460</xmin>
-			<ymin>1817</ymin>
-			<xmax>1158</xmax>
-			<ymax>2413</ymax>
+			<xmin>36</xmin>
+			<ymin>144</ymin>
+			<xmax>91</xmax>
+			<ymax>191</ymax>
 		</bndbox>
 	</object>
 </annotation>
