@@ -121,9 +121,6 @@ def dict_to_tf_example(data,
     #class_name = get_class_name_from_filename(data['filename'])
     #classes_text.append(class_name)
     #classes.append(label_map_dict[class_name])
-    print(data['filename'])
-    print(obj['name'])
-    print(label_map_dict[obj['name']])
     classes_text.append(obj['name'])
     classes.append(label_map_dict[obj['name']])
     truncated.append(int(obj['truncated']))
@@ -156,7 +153,6 @@ def create_tf_record(output_filename,
                      image_dir,
                      examples):
   """Creates a TFRecord file from examples.
-
   Args:
     output_filename: Path to where output file is saved.
     label_map_dict: The label map dictionary.
@@ -164,24 +160,45 @@ def create_tf_record(output_filename,
     image_dir: Directory where image files are stored.
     examples: Examples to parse and save to tf record.
   """
+  annotationdump = open("annotationdump.txt", "w")
+  invalidannotations = [0] * 25
   writer = tf.python_io.TFRecordWriter(output_filename)
+  valid_count = 0
+  invalid_count = 0
   for idx, example in enumerate(examples):
     if idx % 100 == 0:
       logging.info('On image %d of %d', idx, len(examples))
     path = os.path.join(annotations_dir, 'xmls', example + '.xml')
 
     if not os.path.exists(path):
-      logging.warning('Could not find %s, ignoring example.', path)
+      annotationdump.write('Could not find annotation ' + path + '\n')
+      #logging.warning('Could not find annotation %s, ignoring example.', path)
       continue
     with tf.gfile.GFile(path, 'r') as fid:
       xml_str = fid.read()
     xml = etree.fromstring(xml_str)
     data = dataset_util.recursive_parse_xml_to_dict(xml)['annotation']
-
-    tf_example = dict_to_tf_example(data, label_map_dict, image_dir)
-    writer.write(tf_example.SerializeToString())
-
+    try:
+      tf_example = dict_to_tf_example(data, label_map_dict, image_dir)
+      writer.write(tf_example.SerializeToString())
+      valid_count = valid_count + 1
+    except:
+      invalid_count = invalid_count + 1
+      img_path = os.path.join(image_dir, data['filename'])
+      try:
+        for obj in data['object']:
+          invalidannotations[label_map_dict[obj['name']]] += 1
+      except:
+        annotationdump.write('Invalid annotation name for ' + path +'\n')
+        #logging.warning('Invalid annotation name for %s', path)
+      annotationdump.write('Could not find image ' + img_path + ' from annotation ' + path + '\n')
+      #logging.warning('Could not find image %s from annotation %s, ignoring example.', img_path, path)
+  print 'invalid annotations: %d' % invalid_count
+  print 'valid annotations: %d' % valid_count
+  for lab in label_map_dict:
+    print 'invalid annotations for %s: %d' % (lab, invalidannotations[label_map_dict[lab]])
   writer.close()
+  annotationdump.close()
 
 
 # TODO: Add test for pet/PASCAL main files.
