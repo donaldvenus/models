@@ -160,7 +160,7 @@ def create_tf_record(output_filename,
     image_dir: Directory where image files are stored.
     examples: Examples to parse and save to tf record.
   """
-  annotationdump = open("annotationdump.txt", "w")
+  annotationdump = open("annotationdump.txt", "a")
   invalidannotations = [0] * 25
   writer = tf.python_io.TFRecordWriter(output_filename)
   valid_count = 0
