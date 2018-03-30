@@ -172,7 +172,7 @@ def create_tf_record(output_filename,
 
     if not os.path.exists(path):
       annotationdump.write('Could not find annotation ' + path + '\n')
-      #logging.warning('Could not find annotation %s, ignoring example.', path)
+      logging.warning('Could not find annotation %s, ignoring example.', path)
       continue
     with tf.gfile.GFile(path, 'r') as fid:
       xml_str = fid.read()
@@ -190,9 +190,9 @@ def create_tf_record(output_filename,
           invalidannotations[label_map_dict[obj['name']]] += 1
       except:
         annotationdump.write('Invalid annotation name for ' + path +'\n')
-        #logging.warning('Invalid annotation name for %s', path)
+        logging.warning('Invalid annotation name for %s', path)
       annotationdump.write('Could not find image ' + img_path + ' from annotation ' + path + '\n')
-      #logging.warning('Could not find image %s from annotation %s, ignoring example.', img_path, path)
+      logging.warning('Could not find image %s from annotation %s, ignoring example.', img_path, path)
   print 'invalid annotations: %d' % invalid_count
   print 'valid annotations: %d' % valid_count
   for lab in label_map_dict:

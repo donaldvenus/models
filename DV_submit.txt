@@ -19,7 +19,6 @@ gcloud ml-engine jobs submit training `whoami`_object_detection_eval_`date +%s` 
     -- \
     --checkpoint_dir=gs://cards_data/train \
     --eval_dir=gs://cards_data/eval \
-<<<<<<< HEAD
     --pipeline_config_path=gs://cards_data/data/faster_rcnn_resnet101_cards.config
 
 gsutil cp gs://cards_data/train/model.ckpt-9139.* .
@@ -28,6 +27,4 @@ python object_detection/export_inference_graph.py \
     --pipeline_config_path object_detection/samples/configs/faster_rcnn_resnet101_cards.config \
     --checkpoint_path model.ckpt-9139 \
     --inference_graph_path output_inference_graph.pb
-=======
     --pipeline_config_path=gs://cards_data/data/faster_rcnn_resnet101_cards.config
->>>>>>> 31535ba876f4f332e989db338e3de2afcfba4f16

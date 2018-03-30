@@ -1,7 +1,7 @@
 <annotation>
 	<folder>QueenOfSpades</folder>
-	<filename>RS_QueenOfSpades_(67).jpg</filename>
-	<path>C:\Users\Rupal Shah\Dropbox\!!! Week 5\QueenOfSpades\RS_QueenOfSpades_(67).jpg</path>
+	<filename>RS_QueenOfSpades_(43).jpg</filename>
+	<path>C:\Users\Rupal Shah\Documents\CS499 Senior Design\QueenOfSpades\RS_QueenOfSpades_(43).jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>25</xmin>
-			<ymin>3</ymin>
-			<xmax>152</xmax>
-			<ymax>182</ymax>
+			<xmin>32</xmin>
+			<ymin>4</ymin>
+			<xmax>250</xmax>
+			<ymax>213</ymax>
 		</bndbox>
 	</object>
 </annotation>
