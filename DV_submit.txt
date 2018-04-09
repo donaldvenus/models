@@ -1,3 +1,4 @@
+## SUBMIT A TRAINING JOB ## 
 gcloud ml-engine jobs submit training `whoami`_object_detection_`date +%s` \
     --runtime-version 1.2 \
     --job-dir=gs://cards_data/train \
@@ -9,6 +10,7 @@ gcloud ml-engine jobs submit training `whoami`_object_detection_`date +%s` \
     --train_dir=gs://cards_data/train \
     --pipeline_config_path=gs://cards_data/data/faster_rcnn_resnet101_cards.config
 
+## SUBMIT AN AUTOMATED EVALUATION (TESTING) JOB ##
 gcloud ml-engine jobs submit training `whoami`_object_detection_eval_`date +%s` \
     --runtime-version 1.2 \
     --job-dir=gs://cards_data/train \
@@ -21,6 +23,7 @@ gcloud ml-engine jobs submit training `whoami`_object_detection_eval_`date +%s` 
     --eval_dir=gs://cards_data/eval \
     --pipeline_config_path=gs://cards_data/data/faster_rcnn_resnet101_cards.config
 
+## CREATE A FROZEN MODEL ##
 gsutil cp gs://cards_data/train/model.ckpt-9139.* .
 python object_detection/export_inference_graph.py \
     --input_type image_tensor \
