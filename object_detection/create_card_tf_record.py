@@ -1,3 +1,6 @@
+# This file was edited from "create_pet_tf_record.py"
+# Changed sections are marked by comments
+#
 # Copyright 2017 The TensorFlow Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +16,7 @@
 # limitations under the License.
 # ==============================================================================
 
-r"""Convert the Oxford pet dataset to TFRecord for object_detection.
+"""Convert the Card dataset to TFRecord for object_detection.
 
 See: O. M. Parkhi, A. Vedaldi, A. Zisserman, C. V. Jawahar
      Cats and Dogs
@@ -21,8 +24,9 @@ See: O. M. Parkhi, A. Vedaldi, A. Zisserman, C. V. Jawahar
      http://www.robots.ox.ac.uk/~vgg/data/pets/
 
 Example usage:
-    ./create_pet_tf_record --data_dir=/home/user/pet \
-        --output_dir=/home/user/pet/output
+    ./create_card_tf_record --data_dir=`pwd` \
+        --output_dir=`pwd`
+    Will use folders named "images" and "annotations" by default
 """
 
 import hashlib
@@ -143,7 +147,7 @@ def dict_to_tf_example(data,
   }))
   return example
 
-
+# This method was altered from the create_pet_tf_record.py file
 def create_tf_record(output_filename,
                      label_map_dict,
                      annotations_dir,
@@ -157,24 +161,35 @@ def create_tf_record(output_filename,
     image_dir: Directory where image files are stored.
     examples: Examples to parse and save to tf record.
   """
+  # This file contains all annotations that aren't able to be used for some reason (missing images, bad paths, etc.)
   annotationdump = open("annotationdump.txt", "a")
+
+  # Number of invalid annotations for each class of card
   invalidannotations = [0] * 25
   writer = tf.python_io.TFRecordWriter(output_filename)
+
+  # Total count of valid and invalid annotations for entire data set
   valid_count = 0
   invalid_count = 0
+
+  # Loop through every example and add to record file
   for idx, example in enumerate(examples):
     if idx % 100 == 0:
       logging.info('On image %d of %d', idx, len(examples))
     path = os.path.join(annotations_dir, 'xmls', example + '.xml')
-
     if not os.path.exists(path):
+      # If annotation file does not exist
       annotationdump.write('Could not find annotation ' + path + '\n')
       logging.warning('Could not find annotation %s, ignoring example.', path)
       continue
+
+    # Parse xml file (annotation)
     with tf.gfile.GFile(path, 'r') as fid:
       xml_str = fid.read()
     xml = etree.fromstring(xml_str)
     data = dataset_util.recursive_parse_xml_to_dict(xml)['annotation']
+
+    # Attempt to write annotation to record file
     try:
       tf_example = dict_to_tf_example(data, label_map_dict, image_dir)
       writer.write(tf_example.SerializeToString())
@@ -183,13 +198,18 @@ def create_tf_record(output_filename,
       invalid_count = invalid_count + 1
       img_path = os.path.join(image_dir, data['filename'])
       try:
+        # Increment the number of invalid annotations for each card type (if label is valid at all)
         for obj in data['object']:
           invalidannotations[label_map_dict[obj['name']]] += 1
       except:
+        # Invalid annotation name (card not included in dataset)
         annotationdump.write('Invalid annotation name for ' + path +'\n')
         logging.warning('Invalid annotation name for %s', path)
+      # Image unable to be found
       annotationdump.write('Could not find image ' + img_path + ' from annotation ' + path + '\n')
       logging.warning('Could not find image %s from annotation %s, ignoring example.', img_path, path)
+
+  # Print out total number of invalid annotations
   print 'invalid annotations: %d' % invalid_count
   print 'valid annotations: %d' % valid_count
   for lab in label_map_dict:
